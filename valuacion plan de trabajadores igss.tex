@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{amsthm}
 \usepackage{latexsym}
+%\usepackage{mathcal}
 \usepackage{cancel}
 \usepackage{mathrsfs,amsfonts,mathptmx}
 
@@ -60,12 +61,17 @@
 \nocite{*}
 \section{Introducción}
 
+El Plan de Pensiones de los Trabajadores del Instituto Guatemalteco de Seguridad Social se basa en un sistema de prima escalonada, que se supone provee de una reserva no decreciente, por lo que en teoría se recurre únicamente a los ingresos obtenidos de las inversiones de la reserva, pero no la reserva en sí misma. 
+
+Sin embargo en las valuaciones recientes se ha reflejado un "decrecion" de la reserva por lo que se ha visto comprometido el balance de dicho plan, surgiendo de esta situación la necesidad de evaluar la situación financiera desde otra perspectiva para analizar las medidas necesarias así como las recomendaciones (...) para contrarrestar (...) prosiguiendo con una valuación actuarial del plan.
+
 La valuación actuarial del Plan de Pensiones de los Trabajadores del Instituto Guatemalteco de Seguridad Social se hará mediante el cálculo de su Reserva Matemática, la cual es aconsejada por ser este de carácter privado.
 
-Se comenzará haciendo un recuento de las prestaciones que este plan otorga a sus asegurados, así como también indicando los requisitos de cada uno.
+Se comenzará haciendo un recuento de las prestaciones que este plan otorga a sus asegurados, así como también indicando los requisitos de cada uno. Prosiguiendo con el cálculo de los valores presentes de cada prestación del plan para el cálculo final de la reserva matemática total. Comparándola con los datos reales reflejando de esta forma el déficit de la reserva para proseguir con las medidas necesarias para ...
 
 (...)
 
+\newpage
 \section{Generalidades}
 
 El sistema de financiamiento del Plan de Pensiones de los Trabajadores del Instituto Guatemalteco de Seguridad Social (IGSS) está conformado por el sistema de prima escalonada. Dicho plan posee una normativa de revisión actuarial anual con un período de equilibrio no menor a los 5 años. 
@@ -73,6 +79,7 @@ El sistema de financiamiento del Plan de Pensiones de los Trabajadores del Insti
 La finalidad del mismo consiste en otorgar como patrón, beneficios complementarios al programa de Invalidez, Vejez y Sobrevivencia (IVS) del Instituto como velador de la seguridad social. El Plan es de carácter obligatorio para todos los trabajadores, contributivo por ambas partes (trabajador y el Instituto), complementario (como anteriormente se expuso) e independiente de los fondos y el manejo de cualquier otro programa que sea parte del Instituto.
 
 Este tipo de Plan, se encuentra entre los catalogados \textit{plan de pensiones ocupacional}. Posee un régimen de contribución definida. Los beneficios que el plan otorga para sus adeptos son: \textit{benificio en caso invalidez, benificio en vejez, beneficio en caso de sobrevivencia, asignación única} y \textit{cuota mortuoria}.
+
 
 \section{Beneficios}
 
@@ -83,15 +90,15 @@ A continuación se enlistarán a detalle cada uno de los beneficios que el Insti
 Según el IGSS un asegurado, se considera en estado de \textit{Invalidez} cuando presente una incapacidad para procurarse ingresos económicos como asalariado, en las condiciones en que los obtenía antes de la ocurrencia del riesgo que la originó. 
 
 Entre los requisitos del Plan para que un asegurado sea acreedor del beneficio de invalidez se encuentran:
-\begin{enumerate}
-	\item Ser declarado inválido por el IGSS
-	\item Haber contribuido 24 meses al Plan como mínimo en los ultimos cuatro años inmediatamente anteriores al primer día de invalidez
-\end{enumerate}
+\begin{itemize}
+	\item [$\bullet$] Ser declarado inválido por el IGSS.
+	\item [$\bullet$] Haber contribuido 24 meses al Plan como mínimo en los ultimos cuatro años inmediatamente anteriores al primer día de invalidez.
+\end{itemize}
 
 En donde se le otorgará lo siguiente:
 \begin{enumerate}
-	\item Una pensión, cuyo monto será un mínimo del 60\% del último salario mensual o al porcentaje que corresponde según tabla del artículo 10 del Acuerdo de Junta Directiva 1135 Modificado por el Acuerdo de Junta Directiva 1362 
-	\item La pensión de invalidez parcial se transforma en pensión de invalidez total al cumplir 55 años, mayor de 55 años se le dará pensión de invalidez total
+	\item Una pensión, cuyo monto será un mínimo del 60\% del último salario mensual o al porcentaje que corresponde según tabla del artículo 10 del Acuerdo de Junta Directiva 1135 Modificado por el Acuerdo de Junta Directiva 1362.
+	\item La pensión de invalidez parcial se transforma en pensión de invalidez total al cumplir 55 años, mayor de 55 años se le dará pensión de invalidez total.
 \end{enumerate}
 
 Haciendo énfasis en el monto de la pensión cuando sea pensión por invalidez parcial, la cual es la mitad de la total, gran invalidez es igual al 80\% o el correspondiente según tabla mencionada.
@@ -102,37 +109,116 @@ Según los requirimientos del Plan, un asegurado es catalogado en estado de Veje
 
 Los requisitos del Plan para la pensión de vejez son:
 \begin{enumerate}
-	\item Haber contribuido 240 meses al Plan
-	\item Terminar su relación laboral con el Instituto
+	\item Haber contribuido 240 meses al Plan.
+	\item Terminar su relación laboral con el Instituto.
 \end{enumerate}
 
 Siendo el beneficio de este: una pensión cuyo monto es conforme la tabla del artículo 10 del Acuerdo de Junta Directiva 1135 Modificado por el Acuerdo de Junta Directiva 1362.
 
 \subsection{Sobrevivencia}
 
+El plan otorga pensiones a sobrevivientes por muerte de miembros del plan. Los requisitos para que los sobrevivientes sean acreedores de dicha pensión son:
+
+\begin{enumerate}
+	\item Tener 24 meses de contribución.
+	\item Al momento de fallecimiento tener derecho o estuviera percibiendo pensión de invalidéz o vejez.
+\end{enumerate}
+
+Siendo la pensión otorgada igual a la que percibía o le correspondería recibir por invalidez total o vejez según el Acuerdo de Junta Directiva 1124 Modificado por el Acuerdo de Junta Directiva 1362.
+
+\subsection{Asignación Única}
+
+La asignación única es opcional para aquel trabajador que tenga los 55 años, pero sin tener derecho a pensionamiento por vejez. 
+
+El requisito que debe contemplarse es que dicho trabajador tenga acreditados por lo menos 12 meses de contribución efectiva. El monto de dicho beneficio será igual al 70\% del valor de las cuotas que hubiese aportado.
+
+\subsection{Cuota Mortuoria}
+
+En caso de fallecimientos de miembros del plan se le asinga una cuota mortuoria por un total de Q1,500 para gastos de entierro. Dicha cuota se dará bajo las siguientes condiciones 
+
+\begin{enumerate}
+	\item El miembro tenga acreditados por lo menos dos meses de contribución en los últimos seis meses calendario.
+	\item Tenga derecho a pensión de invalidez o vejez.
+	\item Sea pensionado por invalidez, vejez o sobrevivencia.
+\end{enumerate}
 
 
+\section{Las Contribuciones}
+
+\subsection{Salario Mensual del Trabajador}
+
+Es la doceava parte del salario ordinal y/o dieta anual, exceptuando bonificaciones. Durante el año anterior a la fecha del acontencimiento que origina la pensión. 
+
+Excepto para vejez; la cual se entenderá como la treintaiseisava parte del salario ordinal y/o dieta devengado incluyendo cualquier otra retribución, exceptuando bonificaciones durante los tres años anteriores a la fecha del acontecimiento que origina la pensión.
+
+\subsection{Las Cuotas}
+
+Las cuotas de contribución al plan se calculan mediante la doceava parte del salario ordinario y extraoridanario que realice la institución, exceptuando bonos en las siguientes proporciones:
+
+\begin{enumerate}
+	\item El instituto como patrono 9.0 por ciento.
+	\item Los miembros del plan 4.5 por ciento.
+\end{enumerate}
+
+\section{La Reserva Matemática}
+
+El método de valuación actuarial que analiza la Reserva Matemática (RM) de una plan de pensiones se divide en dos, primero se calcula el valor presente esperado de los sueldos asegurados y segundo se calcula el valor presente esperado de las pensiones, de los beneficios del plan, por pagar a los afiliados y a sus beneficiarios.
 
 
+\subsection{Cálculo del Valor Presente}
+
+El cálculo del valor presente esperado ($VPE(x)$) de un capital $C$ es $VPE(C)=C\upsilon$, donde $\upsilon$ es el factor de descuento asociado a una tasa de interés anual efectiva $i$.
+
+Para el cálculo de los valores presentes esperados de las prestaciones que el plan ofrece se hará uso de la siguiente notación:
+
+\begin{itemize}
+	\item [*] Tasa de interés anual efectiva: $i$.
+	\item [*] Factor de descuento asociado a $i$: $\upsilon$.
+	\item [*] Tasa promedio de incremento anual esperado: $j$.
+	\item [*] Factor de descuento asociado a $j$: $\textit{u}$.
+\end{itemize}
+
+Donde $\upsilon$ y $\textit{u}$ están dados por:
+
+\begin{center}
+	\begin{tabular}{ccc}
+$\upsilon = \dfrac{1}{1+i}$	& y & $\textit{u}=\dfrac{1}{1+j}$ \\ 
+\end{tabular} 
+\end{center}
 
 
+\subsection{Funciones a Utilizar}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{itemize}
+	\item [$\bullet$] El porcentaje de contribución 13.5 $porcon$
+	\item [$\bullet$] El último sueldo mensual del trabajador: $suemen$.
+	\item [$\bullet$] La proyección del sueldo anual de los trabajadores: $salpro(suemen, k)$
+	\item [$\bullet$] La probabilidad de sobrevivencia a todos los riesgos $k$ años en el futuro: $_{k}p^{(t)}$.
+	\item [$\bullet$] La contribución anual en el año $k$: $conanu(k)$.
+	\item [$\bullet$] El valor presente esperado de las contribuciones: $VPE(C)$.
+	\item [$\bullet$] La probabilidad de ocurrencia de muerte durante el año $k$: $q_{k}^{(m)}$.
+	\item [$\bullet$] La probabilidad de ocurrenia de invalidez durante el año $k$: $q_{k}^{(i)}$.
+	\item [$\bullet$] La probabilidad de ocurrencia de jubilación durante el año $k$: $q_{k}^{(j)}$.
+	\item [$\bullet$] La probabilidad de ocurrencia de retiro durante el año $k$: $q_{k}^{(r)}$.
+	\item [$\bullet$] La pensión mensual del pensionado: $penmen$
+	\item [$\bullet$] Pensión por invalidez: $porinv$.
+	\item [$\bullet$] El valor presente esperado del beneficio por invalidez: $VPE(I)$.
+	\item [$\bullet$] El beneficio de la prestación por invalidez en el año $k$: $beninv(k)$.
+	\item [$\bullet$] La pensión anual por invalidez en el año $k$: $peananuinv(suemen, k)$.
+	\item [$\bullet$] Porcentaje del monto de pensión por invalidez: $porinv(x,s)$
+	\item [$\bullet$] El riesgo de muerte en la población de los trabajadores inválidos: $\ddot{a}^{(i)}_{x}$.
+	\item [$\bullet$] El beneficio de la prestación por jubilación en el año $k$: $benjub(k)$.
+	\item [$\bullet$] El porcentaje del monto de pensión por vejez: $porjub(x,s)$.
+	\item [$\bullet$] La pensión anual esperada al jubilarse en el año $k$: $penanujub(suemen,k)$.
+	\item [$\bullet$] El valor presente esperado del beneficio de jubilación: $VPE(J)$.
+	\item [$\bullet$] El riesgo de muerte de los trabajadores jubilados: $\ddot{a}^{(j)}_{x}$.
+	\item [$\bullet$] El beneficio de la prestación a sobrevivientes en el año $k$: $bensob(k)$.
+	\item [$\bullet$] La pensión anual esperada del grupo de sobrevivientes en el año $k$: $penanusob(suemen,k)$.
+	\item [$\bullet$] El valor presente esperado del beneficio de sobrevivientes: $VPE(S)$
+	\item [$\bullet$] El beneficio de la prestación de asignación única: $benasi(k)$.
+	\item [$\bullet$] El valor presente esperado del beneficio de asignación única: $VPE(AU)$.
+	\item [$\bullet$] El valor presente esperado del beneficio de cuota mortuoria: $VPE(CM)$.
+\end{itemize}
 
 
 
