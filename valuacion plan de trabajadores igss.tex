@@ -80,7 +80,7 @@ La finalidad del mismo consiste en otorgar como patrón, beneficios complementar
 
 Este tipo de Plan, se encuentra entre los catalogados \textit{plan de pensiones ocupacional}. Posee un régimen de contribución definida. Los beneficios que el plan otorga para sus adeptos son: \textit{benificio en caso invalidez, benificio en vejez, beneficio en caso de sobrevivencia, asignación única} y \textit{cuota mortuoria}.
 
-
+\newpage
 \section{Beneficios}
 
 A continuación se enlistarán a detalle cada uno de los beneficios que el Instituto otorga a sus trabajadores mediante el Plan:
@@ -143,6 +143,8 @@ En caso de fallecimientos de miembros del plan se le asinga una cuota mortuoria 
 \end{enumerate}
 
 
+\newpage
+
 \section{Las Contribuciones}
 
 \subsection{Salario Mensual del Trabajador}
@@ -160,6 +162,8 @@ Las cuotas de contribución al plan se calculan mediante la doceava parte del sa
 	\item Los miembros del plan 4.5 por ciento.
 \end{enumerate}
 
+\newpage
+
 \section{La Reserva Matemática}
 
 El método de valuación actuarial que analiza la Reserva Matemática (RM) de una plan de pensiones se divide en dos, primero se calcula el valor presente esperado de los sueldos asegurados y segundo se calcula el valor presente esperado de las pensiones, de los beneficios del plan, por pagar a los afiliados y a sus beneficiarios.
@@ -167,58 +171,96 @@ El método de valuación actuarial que analiza la Reserva Matemática (RM) de un
 
 \subsection{Cálculo del Valor Presente}
 
-El cálculo del valor presente esperado ($VPE(x)$) de un capital $C$ es $VPE(C)=C\upsilon$, donde $\upsilon$ es el factor de descuento asociado a una tasa de interés anual efectiva $i$.
+El cálculo del valor presente esperado ($V\!PE(x)$) de un capital $C$ es $V\!PE(C)=C\upsilon$, donde $\upsilon$ es el factor de descuento asociado a una tasa de interés anual efectiva $i$.
 
 Para el cálculo de los valores presentes esperados de las prestaciones que el plan ofrece se hará uso de la siguiente notación:
 
 \begin{itemize}
-	\item [*] Tasa de interés anual efectiva: $i$.
-	\item [*] Factor de descuento asociado a $i$: $\upsilon$.
-	\item [*] Tasa promedio de incremento anual esperado: $j$.
-	\item [*] Factor de descuento asociado a $j$: $\textit{u}$.
+	\item [*] Genero = $g$.
+	\item [*] Edad= $x$.
+	\item [*] Tiempo de servicio = $s$.
+	\item [*] Tasa de interés anual efectiva = $i$.
+	\item [*] Tasa promedio de incremento anual esperado = $j$.
+	\item [*] El último sueldo mensual del trabajador = $suemen$.
+	%\item [*] Factor de descuento asociado a $j$: $\textit{u}$.
 \end{itemize}
 
-Donde $\upsilon$ y $\textit{u}$ están dados por:
+Donde $suemen$ corresponde al sueldo reportado en la información proporcionada por RRHH. A continuación se presentan las principales funciones a utilizar en el cálculo de los VPE de las distintas prestaciones que el Plan ofrece: 
+
+\begin{itemize}
+	\item [*] Factor de descuento asociado a $i$ = $\upsilon$.
+	\item [*] La proyección del sueldo anual de los trabajadores = $salpro(suemen,k)$.
+\end{itemize}
+
+Donde las funciones  $\upsilon$ y $salpro(suemen,k)$ están dadas por:
 
 \begin{center}
 	\begin{tabular}{ccc}
-$\upsilon = \dfrac{1}{1+i}$	& y & $\textit{u}=\dfrac{1}{1+j}$ \\ 
-\end{tabular} 
+		$\upsilon = \dfrac{1}{1+i}$, & y & $salpro(suemen,k)=suemen(1+j)^{k}$
+	\end{tabular} 
 \end{center}
 
-
-\subsection{Funciones a Utilizar}
+Por otro lado, dado que el VPE de los beneficios por pagar depende de la ocurrencia de algunos eventos, el momento en que estos ocurren y el monto de los beneficios, es necesario la utilización de distribuciones de probabilidad, de las cuales se obtiene lo siguiente:
 
 \begin{itemize}
-	\item [$\bullet$] El porcentaje de contribución 13.5 $porcon$
-	\item [$\bullet$] El último sueldo mensual del trabajador: $suemen$.
-	\item [$\bullet$] La proyección del sueldo anual de los trabajadores: $salpro(suemen, k)$
-	\item [$\bullet$] La probabilidad de sobrevivencia a todos los riesgos $k$ años en el futuro: $_{k}p^{(t)}$.
-	\item [$\bullet$] La contribución anual en el año $k$: $conanu(k)$.
-	\item [$\bullet$] El valor presente esperado de las contribuciones: $VPE(C)$.
-	\item [$\bullet$] La probabilidad de ocurrencia de muerte durante el año $k$: $q_{k}^{(m)}$.
-	\item [$\bullet$] La probabilidad de ocurrenia de invalidez durante el año $k$: $q_{k}^{(i)}$.
-	\item [$\bullet$] La probabilidad de ocurrencia de jubilación durante el año $k$: $q_{k}^{(j)}$.
-	\item [$\bullet$] La probabilidad de ocurrencia de retiro durante el año $k$: $q_{k}^{(r)}$.
-	\item [$\bullet$] La pensión mensual del pensionado: $penmen$
-	\item [$\bullet$] Pensión por invalidez: $porinv$.
-	\item [$\bullet$] El valor presente esperado del beneficio por invalidez: $VPE(I)$.
-	\item [$\bullet$] El beneficio de la prestación por invalidez en el año $k$: $beninv(k)$.
-	\item [$\bullet$] La pensión anual por invalidez en el año $k$: $peananuinv(suemen, k)$.
-	\item [$\bullet$] Porcentaje del monto de pensión por invalidez: $porinv(x,s)$
-	\item [$\bullet$] El riesgo de muerte en la población de los trabajadores inválidos: $\ddot{a}^{(i)}_{x}$.
-	\item [$\bullet$] El beneficio de la prestación por jubilación en el año $k$: $benjub(k)$.
-	\item [$\bullet$] El porcentaje del monto de pensión por vejez: $porjub(x,s)$.
-	\item [$\bullet$] La pensión anual esperada al jubilarse en el año $k$: $penanujub(suemen,k)$.
-	\item [$\bullet$] El valor presente esperado del beneficio de jubilación: $VPE(J)$.
-	\item [$\bullet$] El riesgo de muerte de los trabajadores jubilados: $\ddot{a}^{(j)}_{x}$.
-	\item [$\bullet$] El beneficio de la prestación a sobrevivientes en el año $k$: $bensob(k)$.
-	\item [$\bullet$] La pensión anual esperada del grupo de sobrevivientes en el año $k$: $penanusob(suemen,k)$.
-	\item [$\bullet$] El valor presente esperado del beneficio de sobrevivientes: $VPE(S)$
-	\item [$\bullet$] El beneficio de la prestación de asignación única: $benasi(k)$.
-	\item [$\bullet$] El valor presente esperado del beneficio de asignación única: $VPE(AU)$.
-	\item [$\bullet$] El valor presente esperado del beneficio de cuota mortuoria: $VPE(CM)$.
+		\item [*] La probabilidad de sobrevivencia a todos los riesgos $k$ años en el futuro: $_{k}p^{(t)}$.
+		\item [*] La probabilidad de ocurrencia de muerte (m) durante el año $k$: $q_{k}^{(m)}$.
+		\item [*] La probabilidad de ocurrenia de invalidez (i) durante el año $k$: $q_{k}^{(i)}$.
+		\item [*] La probabilidad de ocurrencia de jubilación (j) durante el año $k$: $q_{k}^{(j)}$.
+		\item [*] La probabilidad de ocurrencia de retiro (r) durante el año $k$: $q_{k}^{(r)}$.
 \end{itemize}
+
+\subsubsection{Valor Presente Esperado de Las Contribuciones ($V\!PE(C)$)}
+
+Para una simplificación de cálculos, se hará consideración que se realiza una sola contribución anual, pagadera al final del año en estudio, la cual es igual a 12 veces el sueldo mensual proyectado. Por lo tanto no se tomará en consideración los interéses que dichas contribuciones pueden generar al ser pagadas mes a  mes. Además se asume que cada año las contribuciones son pagadas solamente si los trabajadores sobreviven a todos los riesgos.
+
+Primero se considera el porcentaje de contribución total $porcon$ el cual es igual al $13.5$ porciento. De donde se prosigue el cálculo del $V\!PE(C)$ de la siguiente forma:
+\begin{equation*}
+V\!PE(C)=\sum \limits_{k=0}^\omega \upsilon^{-k}_{k}p^{(t)} conanu(k)
+\end{equation*}
+
+Donde $\omega$ es el límite superior en años del intervalo de tiempo en estudio. Por otro lado la función $conanu(k)$ corresponde a la contribución anual al plan la cual está dada por:
+
+\begin{equation*}
+conanu(k)=12\;porcon\;sal\!pro(suemen,k)
+\end{equation*}
+
+\subsubsection{Valor Presente Esperado de La Pensión por Invalidez ($V\!PE(I)$)}
+
+En el cálculo del $V\!PE(I)$ según los reglamentos el porcentaje atribuido a la pensión de invaliz está determinado según sea el tipo (gran, total y parcial). Sin embargo para una simplificación, dado el uso de tasa de invalidez general, se asumirá el mayor porcentaje posible, el cuál está restringido a un 80\% en forma conservadora. Seguido se encuentran las funciones particulares de la pensión de invalidez:
+
+\begin{itemize}
+	\item [*] Porcentaje dado por la tabla del artículo 10 = $tasa(x,s)$.
+	\item [*] El porcentaje correspondiente a la pensión por invalidez $porinv(x,s)=max{80, tabla(x,s)}$.
+	\item [*] El VPE de una renta vitalicia anticipada inmediata anual, pagadera a una persona de edad x: $\ddot{a}^{(i)}_{x+k}$.  
+	\item [*] El beneficio de la  prestación en el año $k$: $beninv(k)=penanuinv(suemen,k)\;\ddot{a}^{(i)}_{x+k}$.
+\end{itemize}
+
+Para el VPE de $\ddot{a}^{(i)}_{x+k}$, se considera unicamente el riesgo de muerte en la población de los trabajadores inválidos. Prosiguiendo con el cálculo del $V\!PE(I)$ se hará uso de la siguiente:
+
+\begin{equation*}
+V\!PE(I)=V\!PE(I)_{A}-V\!PE(I)_{P}
+\end{equation*}
+
+donde $V\!PE(I)_{A}$ detona los activos y $V\!PE(I)_{P}$ a los pasivos. 
+
+
+
+%\subsection{Funciones a Utilizar}
+
+
+%	\item [$\bullet$] El beneficio de la prestación por jubilación en el año $k$: $benjub(k)$.
+%	\item [$\bullet$] El porcentaje del monto de pensión por vejez: $porjub(x,s)$.
+%	\item [$\bullet$] La pensión anual esperada al jubilarse en el año $k$: $penanujub(suemen,k)$.
+%	\item [$\bullet$] El valor presente esperado del beneficio de jubilación: $VPE(J)$.
+%	\item [$\bullet$] El riesgo de muerte de los trabajadores jubilados: $\ddot{a}^{(j)}_{x}$.
+%	\item [$\bullet$] El beneficio de la prestación a sobrevivientes en el año $k$: $bensob(k)$.
+%	\item [$\bullet$] La pensión anual esperada del grupo de sobrevivientes en el año $k$: $penanusob(suemen,k)$.
+%	\item [$\bullet$] El valor presente esperado del beneficio de sobrevivientes: $VPE(S)$
+%	\item [$\bullet$] El beneficio de la prestación de asignación única: $benasi(k)$.
+%	\item [$\bullet$] El valor presente esperado del beneficio de asignación única: $VPE(AU)$.
+%	\item [$\bullet$] El valor presente esperado del beneficio de cuota mortuoria: $VPE(CM)$.
+%\end{itemize}
 
 
 
